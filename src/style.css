@@ -22,7 +22,7 @@
 
 @layer components {
   .container-page {
-    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8;
   }
 
   .pill {
@@ -99,6 +99,14 @@
     border-right-color: transparent;
     animation: orb-spin-reverse 1s linear infinite;
   }
+
+  .orb-ring-nav-a {
+    animation: orb-spin 2.5s linear infinite;
+  }
+
+  .orb-ring-nav-b {
+    animation: orb-spin-reverse 2.5s linear infinite;
+  }
 }
 
 @keyframes orb-spin {
@@ -116,5 +124,41 @@
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+/* Testimonials Swiper: cards effect */
+.testimonials-swiper {
+  max-width: 100%;
+}
+.testimonials-swiper-cards-inner {
+  width: 100%;
+  max-width: 420px;
+  height: 380px;
+  margin: 0 auto;
+}
+.testimonials-swiper-cards-inner .swiper-slide {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 40px -10px rgb(15 23 42 / 0.15);
+}
+.testimonials-swiper-cards-inner .swiper-slide > * {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .testimonials-swiper-cards-inner {
+    max-width: 440px;
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .testimonials-swiper-cards-inner {
+    max-width: 460px;
+    height: 420px;
   }
 }
